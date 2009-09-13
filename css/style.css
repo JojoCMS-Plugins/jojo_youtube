@@ -1,0 +1,9 @@
+.youtube, .youtube embed {
+  width:425px;
+  height:350px;
+}
+.youtube embed {
+  background-image:url(../images/youtube-videoloading.gif);
+  background-repeat:no-repeat;
+  background-position:center
+}
