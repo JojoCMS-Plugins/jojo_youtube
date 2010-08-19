@@ -28,6 +28,9 @@ class JOJO_Plugin_jojo_youtube extends JOJO_Plugin
             }
 */
             $smarty->assign('youtubeurl', $url);
+            $smarty->assign('youtubeid', $id);
+            $smarty->assign('youtubew', Jojo::getOption('youtube_width', 425));
+            $smarty->assign('youtubeh', Jojo::getOption('youtube_height', 350));
 
             /* Get the embed html */
             $html = $smarty->fetch('jojo_youtubeembed.tpl');
@@ -35,4 +38,10 @@ class JOJO_Plugin_jojo_youtube extends JOJO_Plugin
         }
         return $content;
     }
+
+     public static function customhead()
+    {
+        return '<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" type="text/javascript"></script>'."\n";
+    }
+
 }

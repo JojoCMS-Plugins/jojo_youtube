@@ -12,6 +12,8 @@
  */
 
 
+/* add swf object embed javascript to head */
+Jojo::addHook('customhead', 'customhead', 'jojo_youtube');
 
 
 /* add an icon onto the editors for inserting Youtube videos */
@@ -36,6 +38,27 @@ $_options[] = array(
     'plugin'      => 'jojo_youtube'
 );
 
+$_options[] = array(
+    'id'          => 'youtube_width',
+    'category'    => 'YouTube',
+    'label'       => 'video Width',
+    'description' => 'Pixel width for the video',
+    'type'        => 'text',
+    'options'     => '',
+    'default'     => '425',
+    'plugin'      => 'jojo_youtube'
+);
+
+$_options[] = array(
+    'id'          => 'youtube_height',
+    'category'    => 'YouTube',
+    'label'       => 'video Height',
+    'description' => 'Pixel height for the video',
+    'type'        => 'text',
+    'options'     => '',
+    'default'     => '350',
+    'plugin'      => 'jojo_youtube'
+);
 /* Video Embed filter */
 
 $youtube_filter = Jojo::getOption('youtube_filter');
