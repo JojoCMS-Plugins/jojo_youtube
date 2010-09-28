@@ -2,28 +2,28 @@
 <div id="youtubevideo-{$youtubeid}"></div>
 <script type="text/javascript">
 /*<![CDATA[*/
-{literal}$(document).ready(function () {
+$(document).ready(function () {ldelim}
     /* Embed youtube player */
     swfobject.embedSWF(
-{/literal} "{$youtubeurl}",
+ "{$youtubeurl}",
         'youtubevideo-{$youtubeid}',
         '{$youtubew}',
         '{$youtubeh}',
         '9.0.0',
         '',
-        '',{literal}
-        {
+        '',
+        {ldelim}
             allowFullScreen: 'true',
             allowscriptaccess: 'always'
-        },
-        {
+        {rdelim},
+        {ldelim}
             allowscriptaccess: 'always',
             allowfullscreen: 'true',
             width: '{$youtubew}',
             height: '{$youtubeh}'
-        }
+        {rdelim}
     );
-});{/literal}
+{rdelim});
 /*]]>*/
 </script>
 </div>
