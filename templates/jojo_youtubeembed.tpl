@@ -14,10 +14,12 @@ $(document).ready(function () {ldelim}
         '',
         {ldelim}
             allowFullScreen: 'true',
-            allowscriptaccess: 'always'
+            allowscriptaccess: 'always',
+            wmode: 'transparent'
         {rdelim},
         {ldelim}
             allowscriptaccess: 'always',
+            wmode: 'transparent',
             allowfullscreen: 'true',
             width: '{$youtubew}',
             height: '{$youtubeh}'
