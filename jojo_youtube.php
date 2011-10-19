@@ -41,7 +41,9 @@ class JOJO_Plugin_jojo_youtube extends JOJO_Plugin
 
      public static function customhead()
     {
-        return '<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" type="text/javascript"></script>'."\n";
+        global $issecure;
+        $s = ($issecure) ? 's' : '';
+        return '<script src="http'.$s.'://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" type="text/javascript"></script>'."\n";
     }
 
 }
